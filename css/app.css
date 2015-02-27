@@ -897,7 +897,7 @@ table {
     opacity: 0;
   }
   100% {
-    transform: scale(100);
+    -webkit-transform: scale(100);
     opacity: 1;
   }
 }
