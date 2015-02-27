@@ -799,6 +799,8 @@ table {
 
 .logo-loadingend .logo-showend .logo-textbg{
   opacity: 1;
+  -webkit-transition: transform 1s ease-in 0.1s;
+  transition: transform 1s ease-in 0.1s;
   -webkit-animation-name: "showendSpy";
   -webkit-animation-duration: 0.5s;
   -webkit-animation-delay: 1s;
@@ -859,8 +861,6 @@ table {
   opacity: 1;
 }
 .logo-showimg .logo-textbg{
-  -webkit-transition: transform 1s ease-in 0.1s;
-  transition: transform 1s ease-in 0.1s;
   -webkit-transform: translate(-50%, -150%);
   transform: translate(-50%, -150%);
 }
