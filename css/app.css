@@ -843,7 +843,7 @@ table {
   vertical-align: middle;
   background-color: #000;
   z-index: 110;
-  display: none;
+  opacity: 0;
 }
 .logo-showend .logo-img > img{
   position: absolute;
@@ -856,7 +856,7 @@ table {
 }
 
 .logo-showimg .logo-img{
-  display: block;
+  opacity: 1;
 }
 .logo-showimg .logo-textbg{
   -webkit-transition: transform 0.5s ease-in 0s;

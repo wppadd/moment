@@ -29,7 +29,7 @@
     <div class="logo-showend">
       <div class="logo-textbg"><span class="logo-text">M</span></div>
       <div class="logo-img">
-        <img src="img/test.jpg" alt="">
+        <img data-src="http://apps.wppadd.com/moment/img/test.jpg" alt="">
       </div>
     </div>
   </div>
@@ -46,6 +46,14 @@
         $(this).addClass('logo-showimg')
         next()
       })
+
+    $('img').each(function (e) {
+      var curImgUrl = $(this).data('src')
+      var img = new Image()
+      img.src = curImgUrl
+
+      $(this).attr('src', curImgUrl)
+    })
   })
 </script>
 </body>
