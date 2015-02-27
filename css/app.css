@@ -700,10 +700,10 @@ table {
     opacity: 0;
   }
   20% {
-    opacity: 0.5;
+    opacity: 1;
   }
   40% {
-    opacity: 1;
+    /*opacity: 1;*/
   }
   50% {
     border-bottom-color: #4083a9;
@@ -735,7 +735,7 @@ table {
 }
 .logo-loading .logo-jet{
   -webkit-animation-name: "jetSpy";
-  -webkit-animation-duration: 2.4s;
+  -webkit-animation-duration: 1s;
   -webkit-animation-delay: 2.2s;
   -webkit-animation-fill-mode: forwards;
 }
@@ -769,4 +769,95 @@ table {
     -webkit-transform: skewY(-4deg);
     transform: skewY(-4deg);
   }
+}
+
+.logo-showend{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.logo-showend .logo-textbg{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1%;
+  height: 1%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-color: #4083a9;
+  color: #4083a9;
+  font-family: Arial;
+  font-size: 0rem;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 0;
+  z-index: 120;
+}
+
+.logo-loadingend .logo-showend .logo-textbg{
+  opacity: 1;
+  -webkit-animation-name: "showendSpy";
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes 'showendSpy' {
+  0% {
+    font-size: 0.8rem;
+  }
+  10% {
+    color: #fff;
+  }
+  100% {
+    color: #fff;
+    width: 100.38%;
+    height: 100.38%;
+    font-size: 10rem;
+  }
+}
+
+.logo-showend .logo-textbg > .logo-text{
+  position: absolute;
+  margin: auto;
+  top: 38%;
+  left: 0;
+  width: 100%;
+}
+
+.logo-showend .logo-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 101%;
+  height: 101%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  vertical-align: middle;
+  background-color: #000;
+  z-index: 110;
+  display: none;
+}
+.logo-showend .logo-img > img{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 99%;
+}
+
+.logo-showimg .logo-img{
+  display: block;
+}
+.logo-showimg .logo-textbg{
+  -webkit-transition: transform 0.5s ease-in 0.1s;
+  transition: transform 0.5s ease-in 0.1s;
+  -webkit-transform: translate(-50%, -150%);
+  transform: translate(-50%, -150%);
 }

@@ -26,12 +26,26 @@
         <div class="logo-jet"></div>
       </div>
     </div>
+    <div class="logo-showend">
+      <div class="logo-textbg"><span class="logo-text">M</span></div>
+      <div class="logo-img">
+        <img src="img/test.jpg" alt="">
+      </div>
+    </div>
   </div>
 </div>
 <script src="js/jquery/jquery.js"></script>
 <script>
   $(function () {
     $('.logo').addClass('logo-loading')
+      .delay(2400).queue(function (next) {
+        $(this).addClass('logo-loadingend')
+        next()
+      })
+      .delay(1600).queue(function (next) {
+        $(this).addClass('logo-showimg')
+        next()
+      })
   })
 </script>
 </body>
