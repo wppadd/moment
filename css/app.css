@@ -809,8 +809,11 @@ table {
   0% {
     font-size: 0.8rem;
   }
-  10% {
-    color: #fff;
+  20% {
+    color: #548AA9;
+  }
+  50% {
+    color: #7E96A3;
   }
   100% {
     color: #fff;
@@ -856,8 +859,8 @@ table {
   display: block;
 }
 .logo-showimg .logo-textbg{
-  -webkit-transition: transform 0.5s ease-in 0.1s;
-  transition: transform 0.5s ease-in 0.1s;
+  -webkit-transition: transform 0.5s ease-in 0s;
+  transition: transform 0.5s ease-in 0s;
   -webkit-transform: translate(-50%, -150%);
   transform: translate(-50%, -150%);
 }
