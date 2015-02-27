@@ -674,10 +674,10 @@ table {
   opacity: 0;
   top: 50%;
   left: 50%;
-  width: 6.4rem;
+  width: 6.2rem;
   height: 5.8rem;
-  margin: -3.4rem 0 0 -3.3rem;
-  border: 0.3rem solid #DA422B;
+  margin: -3.6rem 0 0 -3.4rem;
+  border: 0.4rem solid #DA422B;
   z-index: 20;
 }
 .logo-loading .logo-cover{
