@@ -29,8 +29,9 @@
     <div class="logo-showend">
       <div class="logo-textbg"><span class="logo-text">M</span></div>
       <div class="logo-img">
-        <img data-src="http://apps.wppadd.com/moment/img/test.jpg" alt="">
+        <img data-src="http://apps.wppadd.com/moment/img/test2.jpg" alt="">
       </div>
+      <div class="logo-mask"></div>
     </div>
   </div>
 </div>
@@ -42,8 +43,26 @@
         $(this).addClass('logo-loadingend')
         next()
       })
-      .delay(2600).queue(function (next) {
+      .delay(1600).queue(function (next) {
         $(this).addClass('logo-showimg')
+        next()
+      })
+      .delay(800).queue(function (next) {
+        $(this).removeClass('logo-loadingend logo-loading')
+        next()
+      })
+      .delay(2000).queue(function (next) {
+        $(this).addClass('logo-next')
+        next()
+      })
+      .delay(2200).queue(function (next) {
+        $(this).removeClass('logo-next logo-showimg')
+          .addClass('logo-loading')
+        next()
+      })
+      .delay(2400).queue(function (next) {
+        $(this).find('.logo-text').css('top', '20%').html('敬请期待')
+        $(this).addClass('logo-loadingend')
         next()
       })
 
