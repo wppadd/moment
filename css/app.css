@@ -859,8 +859,8 @@ table {
   opacity: 1;
 }
 .logo-showimg .logo-textbg{
-  -webkit-transition: transform 0.5s ease-in 0s;
-  transition: transform 0.5s ease-in 0s;
+  -webkit-transition: transform 1s ease-in 0.1s;
+  transition: transform 1s ease-in 0.1s;
   -webkit-transform: translate(-50%, -150%);
   transform: translate(-50%, -150%);
 }
