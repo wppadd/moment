@@ -677,13 +677,13 @@ table {
   width: 6rem;
   height: 5.6rem;
   margin: -3.3rem 0 0 -3.1rem;
-  border: 3px solid #DA422B;
+  border: 0.2rem solid #DA422B;
   z-index: 20;
   overflow: hidden;
 }
 .logo-loading .logo-cover{
   -webkit-animation-name: "coverSpy";
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 4s;
   -webkit-animation-delay: 2.2s;
   -webkit-animation-fill-mode: forwards;
 }
@@ -698,8 +698,17 @@ table {
   40% {
     opacity: 1;
   }
+  50% {
+    border-bottom-color: #4083a9;
+  }
   60% {
-    border-color: #4083a9;
+    border-left-color: #4083a9;
+  }
+  70% {
+    border-top-color: #4083a9;
+  }
+  90% {
+    border-right-color: #4083a9;
   }
   100% {
     opacity: 1;
