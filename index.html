@@ -29,7 +29,7 @@
     <div class="logo-showend">
       <div class="logo-textbg"><span class="logo-text">M</span></div>
       <div class="logo-img">
-        <img data-src="http://apps.wppadd.com/moment/img/test2.jpg" alt="">
+        <img data-src="http://apps.wppadd.com/moment/img/test.jpg" alt="">
       </div>
       <div class="logo-mask"></div>
     </div>
@@ -38,6 +38,20 @@
 <script src="js/jquery/jquery.js"></script>
 <script>
   $(function () {
+    $('img').each(function (e) {
+      var curImgUrl = $(this).data('src')
+      var img = new Image()
+      img.src = curImgUrl
+
+      $(this).attr('src', curImgUrl)
+    })
+  })
+
+  window.onload = function () {
+    demoRun()
+  }
+
+  function demoRun () {
     $('.logo').addClass('logo-loading')
       .delay(2400).queue(function (next) {
         $(this).addClass('logo-loadingend')
@@ -65,15 +79,7 @@
         $(this).addClass('logo-loadingend')
         next()
       })
-
-    $('img').each(function (e) {
-      var curImgUrl = $(this).data('src')
-      var img = new Image()
-      img.src = curImgUrl
-
-      $(this).attr('src', curImgUrl)
-    })
-  })
+  }
 </script>
 </body>
 </html>
