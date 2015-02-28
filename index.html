@@ -65,24 +65,24 @@
         $(this).addClass('logo-showimg')
         next()
       })
-      .delay(2000).queue(function (next) {
-        $(this).removeClass('logo-loadingend logo-loading')
-        next()
-      })
-      .delay(5000).queue(function (next) {
-        $(this).addClass('logo-next')
-        next()
-      })
-      .delay(2200).queue(function (next) {
-        $(this).removeClass('logo-next logo-showimg')
-          .addClass('logo-loading')
-        next()
-      })
-      .delay(2400).queue(function (next) {
-        $(this).find('.logo-text').css('top', '20%').html('敬请期待')
-        $(this).addClass('logo-loadingend')
-        next()
-      })
+      // .delay(2000).queue(function (next) {
+      //   $(this).removeClass('logo-loadingend logo-loading')
+      //   next()
+      // })
+      // .delay(5000).queue(function (next) {
+      //   $(this).addClass('logo-next')
+      //   next()
+      // })
+      // .delay(2200).queue(function (next) {
+      //   $(this).removeClass('logo-next logo-showimg')
+      //     .addClass('logo-loading')
+      //   next()
+      // })
+      // .delay(2400).queue(function (next) {
+      //   $(this).find('.logo-text').css('top', '20%').html('敬请期待')
+      //   $(this).addClass('logo-loadingend')
+      //   next()
+      // })
   }
 </script>
 </body>
