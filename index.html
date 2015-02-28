@@ -65,11 +65,11 @@
         $(this).addClass('logo-showimg')
         next()
       })
-      .delay(800).queue(function (next) {
+      .delay(2000).queue(function (next) {
         $(this).removeClass('logo-loadingend logo-loading')
         next()
       })
-      .delay(2000).queue(function (next) {
+      .delay(5000).queue(function (next) {
         $(this).addClass('logo-next')
         next()
       })
