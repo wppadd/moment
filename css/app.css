@@ -695,7 +695,7 @@ table {
   border: 0.4rem solid #DA422B;
   z-index: 20;
 }
-.logo-loading .logo-cover{
+.logo-loading-img .logo-cover{
   -webkit-animation-name: "coverSpy";
   -webkit-animation-duration: 4s;
   -webkit-animation-delay: 2.2s;
@@ -740,7 +740,7 @@ table {
   -webkit-transform-origin: bottom left;
   transform-origin: bottom left;
 }
-.logo-loading .logo-jet{
+.logo-loading-img .logo-jet{
   -webkit-animation-name: "jetSpy";
   -webkit-animation-duration: 1s;
   -webkit-animation-delay: 2.2s;
