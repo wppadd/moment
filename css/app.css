@@ -521,6 +521,7 @@ table {
   right: 0;
   bottom: 0;
   z-index: 10;
+  opacity: 0;
 }
 .logo-halo{
   position: absolute;
@@ -637,6 +638,7 @@ table {
 }
 
 .logo-loading .logo-body{
+  opacity: 1;
   -webkit-animation-name: "scaleLarge";
   -webkit-animation-duration: 2s;
   -webkit-animation-delay: 0s;
@@ -784,6 +786,14 @@ table {
   left: 0;
   z-index: 100;
 }
+.logo-showend .logo-tent{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 120;
+}
 .logo-showend .logo-textbg{
   position: absolute;
   top: 50%;
@@ -799,7 +809,6 @@ table {
   text-align: center;
   vertical-align: middle;
   opacity: 0;
-  z-index: 120;
 }
 
 .logo-loadingend .logo-showend .logo-textbg{
@@ -863,11 +872,11 @@ table {
 .logo-showimg .logo-img{
   opacity: 1;
 }
-.logo-showimg .logo-textbg{
+.logo-showimg .logo-tent{
   -webkit-transition: transform 0.5s ease-in 0s;
   transition: transform 0.5s ease-in 0s;
-  -webkit-transform: translate(-50%, -150%);
-  transform: translate(-50%, -150%);
+  -webkit-transform: translate(0, -101%);
+  transform: translate(0, -101%);
 }
 
 .logo-mask{
