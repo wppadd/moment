@@ -793,8 +793,6 @@ table {
   width: 100%;
   height: 100%;
   z-index: 120;
-  -webkit-transition: transform 0.5s ease-in 0s;
-  transition: transform 0.5s ease-in 0s;
 }
 .logo-showend .logo-textbg{
   position: absolute;
@@ -875,8 +873,25 @@ table {
   opacity: 1;
 }
 .logo-showimg .logo-tent{
+  /*-webkit-transition: transform 0.5s ease-in 0s;
+  transition: transform 0.5s ease-in 0s;
   -webkit-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+  transform: translate(0, -50%);*/
+  -webkit-animation-name: "tenthideSpy";
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes 'tenthideSpy' {
+  0% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, -101%, 0);
+    transform: translate3d(0, -101%, 0);
+  }
 }
 
 .logo-mask{
