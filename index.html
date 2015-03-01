@@ -36,15 +36,19 @@
         </div>
       </div>
       <div class="logo-img">
-        <img data-src="http://apps.wppadd.com/moment/img/test.jpg" alt="">
+        <img id="picSnap" data-src="http://apps.wppadd.com/moment/img/test.jpg" alt="">
         <div class="logo-glass"></div>
       </div>
       <div class="logo-mask"></div>
     </div>
+    <div class="logo-upload"><i class="icon-camera"></i></div>
   </div>
 </div>
 <script src="js/jquery/jquery.js"></script>
 <script>
+  var isHidePic = false
+    , isReadyShowPic = false
+
   $(function () {
     $('img').each(function (e) {
       var curImgUrl = $(this).data('src')
@@ -63,6 +67,7 @@
     $('.logo').addClass('logo-loading logo-loading-img')
       .delay(2400).queue(function (next) {
         $(this).addClass('logo-loadingend')
+        isReadyShowPic = true
         next()
       })
       // .delay(1600).queue(function (next) {
@@ -91,10 +96,13 @@
 
 
     $('body').one('touchstart', function(e) {
+      if(!isReadyShowPic){
+        return
+      }
       console.log('touchstart')
       showPic(3000)
       $(this).one('touchend', function (et) {
-        // hidePic()
+        hidePic()
         et.preventDefault()
       })
       e.preventDefault()
@@ -107,17 +115,22 @@
         $(this).removeClass('logo-loadingend logo-loading logo-loading-img')
         next()
       })
-      // .delay(time).queue(function (next) {
-      //   $(this).addClass('logo-next')
-      //   next()
-      // })
+      .delay(time).queue(function (next) {
+        hidePic()
+        next()
+      })
   }
 
   function hidePic() {
+    if(isHidePic){
+      return
+    }
+    $('#picSnap').remove()
+    isHidePic = true
     $('.logo').addClass('logo-next')
-      .delay(500).queue(function (next) {
+      .delay(100).queue(function (next) {
         $(this).removeClass('logo-next logo-showimg')
-          .addClass('logo-loading')
+          .addClass('logo-loading logo-start')
         next()
       })
   }

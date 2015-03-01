@@ -1,16 +1,16 @@
 @font-face {
-	font-family: 'font-moment';
-	src:url('fonts/font-moment.eot?-cw6v56');
-	src:url('fonts/font-moment.eot?#iefix-cw6v56') format('embedded-opentype'),
-		url('fonts/font-moment.woff?-cw6v56') format('woff'),
-		url('fonts/font-moment.ttf?-cw6v56') format('truetype'),
-		url('fonts/font-moment.svg?-cw6v56#font-moment') format('svg');
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?rh4cor');
+	src:url('fonts/icomoon.eot?#iefixrh4cor') format('embedded-opentype'),
+		url('fonts/icomoon.woff?rh4cor') format('woff'),
+		url('fonts/icomoon.ttf?rh4cor') format('truetype'),
+		url('fonts/icomoon.svg?rh4cor#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-	font-family: 'font-moment';
+	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
 	font-weight: normal;
@@ -23,23 +23,27 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
-.icon-check:before {
+.icon-yes:before {
 	content: "\f00c";
 }
 
-.icon-close:before {
+.icon-no:before {
 	content: "\f00d";
 }
 
-.icon-trash-o:before {
+.icon-delete:before {
 	content: "\f014";
 }
 
-.icon-image:before {
+.icon-pic:before {
 	content: "\f03e";
 }
 
-.icon-plus:before {
+.icon-add:before {
 	content: "\f067";
+}
+
+.icon-camera:before {
+	content: "\e90f";
 }
 

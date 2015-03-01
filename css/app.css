@@ -604,8 +604,6 @@ table {
 }
 .logo-loading .logo-part-top{
   top: 1rem;
-  -webkit-transform: rotate(60deg) skewX(30deg);
-  transform: rotate(60deg) skewX(30deg);
 }
 .logo-loading .logo-part-left{
   top: 3.4rem;
@@ -926,8 +924,8 @@ table {
 
 .logo-next .logo-mask{
   -webkit-animation-name: "nextSpy";
-  -webkit-animation-duration: 1s;
-  -webkit-animation-delay: 0.1s;
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 0s;
   -webkit-animation-fill-mode: forwards;
 }
 
@@ -937,6 +935,47 @@ table {
   }
   100% {
     -webkit-transform: scale(100);
+    transform: scale(100);
     opacity: 1;
   }
 }
+
+.logo-upload{
+  border-radius: 4.8rem;
+  width: 4.8rem;
+  height: 4.8rem;
+  z-index: 8000;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+}
+.logo-upload .icon-camera{
+  width: 4.8rem;
+  text-align: center;
+  height: 4.8rem;
+  color: #fff;
+  display: block;
+  line-height: 4.8rem;
+  vertical-align: middle;
+  font-size: 2.68rem;
+}
+
+/*.logo-start{
+  -webkit-animation-name: "btnuploadSpy";
+  -webkit-animation-duration: 0.5s;
+  -webkit-animation-delay: 4s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes 'btnuploadSpy' {
+  100% {
+    top: 80%;
+  }
+}
+
+.logo-start .logo-upload{
+  opacity: 1;
+}*/
+
+
