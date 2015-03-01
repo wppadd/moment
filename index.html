@@ -37,6 +37,7 @@
       </div>
       <div class="logo-img">
         <img data-src="http://apps.wppadd.com/moment/img/test.jpg" alt="">
+        <div class="logo-glass"></div>
       </div>
       <div class="logo-mask"></div>
     </div>
@@ -91,25 +92,25 @@
 
     $('body').one('touchstart', function(e) {
       console.log('touchstart')
-      showPic()
+      showPic(3000)
       $(this).one('touchend', function (et) {
-        hidePic()
+        // hidePic()
         et.preventDefault()
       })
       e.preventDefault()
     })
   }
 
-  function showPic() {
+  function showPic(time) {
     $('.logo').addClass('logo-showimg')
       .delay(500).queue(function (next) {
         $(this).removeClass('logo-loadingend logo-loading logo-loading-img')
         next()
       })
-      .delay(3000).queue(function (next) {
-        $(this).addClass('logo-next')
-        next()
-      })
+      // .delay(time).queue(function (next) {
+      //   $(this).addClass('logo-next')
+      //   next()
+      // })
   }
 
   function hidePic() {
