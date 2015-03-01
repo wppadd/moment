@@ -812,7 +812,6 @@ table {
 }
 
 .logo-loadingend .logo-showend .logo-textbg{
-  opacity: 1;
   -webkit-animation-name: "showendSpy";
   -webkit-animation-duration: 0.5s;
   -webkit-animation-delay: 1s;
@@ -821,15 +820,17 @@ table {
 
 @-webkit-keyframes 'showendSpy' {
   0% {
+    opacity: 1;
     font-size: 0.8rem;
   }
-  20% {
+  40% {
     color: #548AA9;
   }
   50% {
     color: #7E96A3;
   }
   100% {
+    opacity: 1;
     color: #fff;
     width: 100.38%;
     height: 100.38%;
@@ -837,12 +838,20 @@ table {
   }
 }
 
-.logo-showend .logo-textbg > .logo-text{
+.logo-showend .logo-textbg .logo-text{
   position: absolute;
   margin: auto;
   top: 38%;
   left: 0;
   width: 100%;
+  overflow: hidden;
+}
+.logo-showend .logo-text > p{
+  margin: 0.1rem;
+  white-space:nowrap;
+}
+.logo-showend .logo-text .tips{
+  font-size: 0.88rem;
 }
 
 .logo-showend .logo-img{
