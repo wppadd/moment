@@ -89,7 +89,7 @@
 
 
 
-    $('body').on('touchstart', function(e) {
+    $('body').one('touchstart', function(e) {
       console.log('touchstart')
       showPic()
       $(this).one('touchend', function (et) {
