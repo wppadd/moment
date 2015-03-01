@@ -102,6 +102,10 @@
 
   function showPic() {
     $('.logo').addClass('logo-showimg')
+      .delay(500).queue(function (next) {
+        $(this).removeClass('logo-loadingend logo-loading logo-loading-img')
+        next()
+      })
       .delay(3000).queue(function (next) {
         $(this).addClass('logo-next')
         next()
@@ -110,6 +114,11 @@
 
   function hidePic() {
     $('.logo').addClass('logo-next')
+      .delay(500).queue(function (next) {
+        $(this).removeClass('logo-next logo-showimg')
+          .addClass('logo-loading')
+        next()
+      })
   }
 </script>
 </body>
