@@ -45,6 +45,7 @@
   </div>
 </div>
 <script src="js/jquery/jquery.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 <script>
   var isHidePic = false
     , isReadyShowPic = false
@@ -130,10 +131,62 @@
     $('.logo').addClass('logo-next')
       .delay(100).queue(function (next) {
         $(this).removeClass('logo-next logo-showimg')
-          .addClass('logo-loading logo-start')
+          .addClass('logo-loading')
+          next()
+      })
+      .delay(3000).queue(function (next) {
+        $(this).addClass('logo-start')
         next()
       })
   }
+
+  function wxJsInit() {
+    $.post('api/getWxJsSign', function (d) {
+      if(d.result){
+        wx.config({
+          debug: false,
+          appId: 'wxda84c23bb7ab0623',
+          timestamp: d.data.timestamp,
+          nonceStr: d.data.nonceStr,
+          signature: d.data.signature,
+          jsApiList: [
+            'checkJsApi',
+            'hideMenuItems',
+            'showMenuItems',
+            'hideAllNonBaseMenuItem',
+            'showAllNonBaseMenuItem',
+            'chooseImage',
+            'previewImage',
+            'uploadImage',
+            'downloadImage'
+          ]
+        });
+      }
+      else{
+        alert('系统繁忙，稍后再试！')
+      }
+    })
+  }
+
+  function setCookie(c_name,value,expiredays){
+    var exdate=new Date()
+    exdate.setDate(exdate.getDate()+expiredays)
+    document.cookie=c_name+ "=" +escape(value)+
+    ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+  }
+  function getCookie(c_name){
+    if (document.cookie.length>0){
+      c_start=document.cookie.indexOf(c_name + "=")
+      if (c_start!=-1){
+        c_start=c_start + c_name.length+1
+        c_end=document.cookie.indexOf(";",c_start)
+        if (c_end==-1) c_end=document.cookie.length
+        return unescape(document.cookie.substring(c_start,c_end))
+      }
+    }
+    return ""
+  }
+
 </script>
 </body>
 </html>
